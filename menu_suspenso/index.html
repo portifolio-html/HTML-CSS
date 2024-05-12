@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            display: grid;
+            height: 100vh;
+            place-items: center;
+        }
+        nav
+        {
+            width: 300px;
+        }
+
+        #list
+        {
+            background: gray;
+            border-radius: 20px;
+            padding: 10px;
+        }
+
+        .op
+        {
+            background: gray;
+            padding: 5px 10px;
+            list-style: none;
+            color: white;
+            cursor: pointer;
+        }
+        
+        .list_off
+        {
+            display: none;
+        }
+
+        .list_on
+        {
+            background: rgb(180, 180, 180);
+            list-style: none;
+            color: black;
+            padding: 5px 25px;
+        }
+
+        #list_int > li
+        {
+            margin: 10px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <nav>
+        <ul id="list">
+            <li class="op" id="op1">
+                MENU
+                <ul class="list_off list_on" id="ilist-off">
+                    <li class="op-int" id="op-int1">Op-01</li>
+                    <li class="op-int" id="op-int2">Op-02</li>
+                    <li class="op-int" id="op-int3">Op-03</li>
+                    <li class="op-int" id="op-int4">Op-04</li>
+                    <li class="op-int" id="op-int5">Op-05</li>
+                    <li class="op-int" id="op-int6">Op-06</li>
+                </ul>
+            </li>
+            <li class="op" id="op2">
+                CONTATOS
+                <ul class="list_off list_on" id="ilist-off2">
+                    <li class="op-int" id="op-int1">Op-01</li>
+                    <li class="op-int" id="op-int2">Op-02</li>
+                    <li class="op-int" id="op-int3">Op-03</li>
+                    <li class="op-int" id="op-int4">Op-04</li>
+                    <li class="op-int" id="op-int5">Op-05</li>
+                    <li class="op-int" id="op-int6">Op-06</li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <script>
+        let lista = document.querySelector('#op1')
+        let lista3 = document.querySelector('#op2')
+        let lista2 = document.querySelector('#ilist-off')
+        let lista4 = document.querySelector('#ilist-off2')
+        lista.onclick = function (){
+            lista2.classList.toggle('list_off')
+        }
+        lista3.onclick = function (){
+            lista4.classList.toggle('list_off')
+        }
+    </script>
+</body>
+</html>
